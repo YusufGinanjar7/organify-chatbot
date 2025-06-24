@@ -3,8 +3,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 app = FastAPI()
 
-tokenizer = AutoTokenizer.from_pretrained("model/DialoGPT-medium")
-model = AutoModelForCausalLM.from_pretrained("model/DialoGPT-medium")
+tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
+model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
 
 @app.post("/chat")
 async def chat(request: Request):
